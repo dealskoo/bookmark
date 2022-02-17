@@ -10,6 +10,7 @@ use Illuminate\Queue\SerializesModels;
 class Event
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
+
     public $bookmark;
 
     public function __construct(Bookmark $bookmark)
