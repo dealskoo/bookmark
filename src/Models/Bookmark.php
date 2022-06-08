@@ -4,13 +4,11 @@ namespace Dealskoo\Bookmark\Models;
 
 use Dealskoo\Bookmark\Events\Bookmarked;
 use Dealskoo\Bookmark\Events\Unbookmarked;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 
 class Bookmark extends Model
 {
-    use HasFactory;
 
     protected $dispatchesEvents = [
         'created' => Bookmarked::class,
