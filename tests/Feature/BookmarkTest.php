@@ -87,6 +87,7 @@ class BookmarkTest extends TestCase
         $user1->bookmark($post);
         $user2->bookmark($post);
         $this->assertCount(2, $post->bookmarks);
+        $this->assertCount(2, $post->bookmarkers);
 
         $this->assertSame($user1->name, $post->bookmarkers[0]['name']);
         $this->assertSame($user2->name, $post->bookmarkers[1]['name']);
